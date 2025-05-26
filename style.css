@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00A1D6;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.get-started {
+    background: #FF6F61;
+    color: #fff;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 40%;
+}
+
+.image-block {
+    background: #ddd;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.image-block:nth-child(1), .image-block:nth-child(3), .image-block:nth-child(4) {
+    background: #ccc;
+}
+
+.image-block:nth-child(2) {
+    background: #FFCCBC;
+}
+
+.image-block:nth-child(5) {
+    background: #FFE082;
+}
+
+.image-block:nth-child(6) {
+    background: #B0BEC5;
+}
+
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.what-we-do, .why-us, .co-owning {
+    padding: 50px;
+    background: #26C6DA;
+    color: #fff;
+    position: relative;
+}
+
+.what-we-do h2, .why-us h2, .co-owning h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.what-we-do p, .why-us ul, .co-owning ul {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.section-image {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.why-us ul, .co-owning ul {
+    list-style: none;
+}
+
+.why-us ul li, .co-owning ul li {
+    margin-bottom: 15px;
+}
+
+.triangle-image {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.how-it-works {
+    padding: 50px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="2"><rect width="10" height="2" fill="gray"/></svg>') repeat-x;
+}
+
+.step {
+    text-align: center;
+    width: 20%;
+    position: relative;
+}
+
+.step-number {
+    display: block;
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.step p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.join-community {
+    padding: 50px;
+    text-align: center;
+    background: #E1F5FE;
+}
+
+.join-community h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.join-community p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.join-us {
+    background: #FF6F61;
+    color: #fff;
+}
+
+
+.disclaimer {
+    background-color: #ffdddd; 
+    padding: 10px; 
+    border: 1px solid #cc0000; 
+    margin: 20px 30px; 
+    font-size: 14px;
+}
