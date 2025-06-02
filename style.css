@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'BR Firma';
+    src: url('../fonts/BR Firma Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BR Firma';
+    src: url('../fonts/BR Firma Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +22,18 @@
 }
 
 body {
-    color: #333;
+    font-family: 'BR Firma', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
 }
 
-.navbar {
+a {
+    text-decoration: none;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,10 +42,15 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00A1D6;
+    width: 100px;
+    margin-right: 20px;
 }
 
 .nav-links {
@@ -34,13 +63,13 @@ body {
 }
 
 .nav-links a {
-    text-decoration: none;
+    font-size: 1.1em;
     color: #333;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 12px 40px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -48,26 +77,34 @@ body {
 }
 
 .get-started {
-    background: #FF6F61;
-    color: #fff;
+    font-size: 0.8rem;
+    background-color: rgba(242, 107, 52, 1);
+    color: rgba(0, 0, 0, 1);
+    text-transform: capitalize;
 }
 
+
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     background: #f9f9f9;
 }
 
+.inner-bg {
+    padding: 20px 5px 10px 40px;
+}
+
 .hero-text {
-    max-width: 50%;
+    width: 310px;
+    align-self: flex-end;
+    padding-bottom: 30px;
 }
 
 .hero-text h1 {
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero-text p {
@@ -75,11 +112,28 @@ body {
     margin-bottom: 30px;
 }
 
+.lead {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.arrow {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 .hero-images {
+    grid-column: 3 / 6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 40%;
+    width: 100%;
 }
 
 .image-block {
@@ -95,7 +149,9 @@ body {
     color: #333;
 }
 
-.image-block:nth-child(1), .image-block:nth-child(3), .image-block:nth-child(4) {
+.image-block:nth-child(1),
+.image-block:nth-child(3),
+.image-block:nth-child(4) {
     background: #ccc;
 }
 
@@ -118,19 +174,25 @@ body {
     border-radius: 50%;
 }
 
-.what-we-do, .why-us, .co-owning {
+.what-we-do,
+.why-us,
+.co-owning {
     padding: 50px;
     background: #26C6DA;
     color: #fff;
     position: relative;
 }
 
-.what-we-do h2, .why-us h2, .co-owning h2 {
+.what-we-do h2,
+.why-us h2,
+.co-owning h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.what-we-do p, .why-us ul, .co-owning ul {
+.what-we-do p,
+.why-us ul,
+.co-owning ul {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -146,11 +208,13 @@ body {
     border-radius: 20px;
 }
 
-.why-us ul, .co-owning ul {
+.why-us ul,
+.co-owning ul {
     list-style: none;
 }
 
-.why-us ul li, .co-owning ul li {
+.why-us ul li,
+.co-owning ul li {
     margin-bottom: 15px;
 }
 
@@ -230,9 +294,9 @@ body {
 
 
 .disclaimer {
-    background-color: #ffdddd; 
-    padding: 10px; 
-    border: 1px solid #cc0000; 
-    margin: 20px 30px; 
+    background-color: #ffdddd;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    margin: 20px 30px;
     font-size: 14px;
 }
