@@ -87,7 +87,10 @@ header {
 .hero {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background: #f9f9f9;
+    align-items: end;
+    justify-items: end;
+    background: #ffffff;
+    padding-top: 30px;
 }
 
 .inner-bg {
@@ -101,14 +104,14 @@ header {
 }
 
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 58px;
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero-text p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
@@ -131,16 +134,15 @@ header {
 .hero-images {
     grid-column: 3 / 6;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-template-rows: repeat(4, minmax(50px, 1fr));
+    width: 700px;
 }
 
 .image-block {
     background: #ddd;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,15 +151,31 @@ header {
     color: #333;
 }
 
-.image-block:nth-child(1),
-.image-block:nth-child(3),
+
+.image-block:nth-child(1) {
+    grid-column: 2 / 3;
+}
+
+.image-block:nth-child(2) {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    background: #f8b141;
+}
+
+.image-block:nth-child(3) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    height: auto;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    background: rgba(6, 147, 165, .6);
+}
+
 .image-block:nth-child(4) {
     background: #ccc;
 }
 
-.image-block:nth-child(2) {
-    background: #FFCCBC;
-}
+
 
 .image-block:nth-child(5) {
     background: #FFE082;
@@ -171,7 +189,6 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 .what-we-do,
