@@ -402,6 +402,17 @@ img {
 }
 
 @media (max-width: 950px) {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .hamburger {
+    width: 30px;
+  }
   .hero {
     position: relative;
     grid-template-rows: 1fr 1fr;
@@ -452,14 +463,6 @@ img {
 
   .steps {
     width: 350px;
-  }
-
-  .desktop-img {
-    display: none;
-  }
-
-  .mobile-img {
-    display: block;
   }
 
   .why-us {
